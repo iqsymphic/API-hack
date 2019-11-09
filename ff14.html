@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Game Information Hub</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bakamono.css" type="text/css">
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="css/stylesheet2.css" type="text/css">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Slab'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css/normalize.css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <a class="active" href="index.html">Home</a>
+            <a href="ff14.html">Final Fantasy XIV</a>
+        </div>
+
+        <main class="container">
+            <div id="start-page">
+              <section class="app-container">
+                <form id="search-form">
+                  <h1>Character Search</h1>
+            
+                  <p>Enter the name of the character</p><br>
+                    <input
+                          type="text"
+                          id="name-input"
+                          class="form-control"
+                          placeholder="Enter a name"
+                          size="40">
+                    <br><br>
+                  <p>Enter the server name</p>
+                  <a href="https://arrstatus.com/">List of Servers</a><br>
+                    <br><input
+                    type="text"
+                    id="server-input"
+                    class="form-control"
+                    placeholder="Siren, Zalera, Shiva, etc."
+                    size="40">
+                    <br><br><br>
+                              <input
+                                id="submit-button"
+                                class="btn btn-primary"
+                                type="submit"
+                                value="Submit"
+                              >
+                            </form>
+                          </section>
+                          <section id="results-list" class="container hidden">
+                          </section>
+                        </main>
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <script src="script.js"></script>
+                    </body>
+                    </html>

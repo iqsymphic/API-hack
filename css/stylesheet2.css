@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Slab";
+}
+
+.nav-container {
+    background-color: black;
+    overflow: hidden;
+}
+
+.nav-container a {
+    opacity: 75%;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.nav-container a:hover {
+    background-color: #f5fffa;
+    color: black;
+}
+  
+.nav-container a.active {
+    background-color: lightskyblue;
+    color: white;
+  }
