@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head>
-        <meta charset="UTF-8">
-        <title>Game Information Hub</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/bakamono.css" type="text/css">
-        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
-        <link rel="stylesheet" href="css/stylesheet2.css" type="text/css">
-        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Slab'>
-        <link rel="stylesheet" type="text/css" href="css/normalize.css/normalize.css" media="screen">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Final Fantasy XIV Quick Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bakamono.css" type="text/css" />
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="css/stylesheet2.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/normalize.css/normalize.css"
+      media="screen"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-    <body>
-        <div class="sidebar">
-            <a class="active" href="index.html">Home</a>
-            <a href="ff14.html">Final Fantasy XIV</a>
+  <body>
+      <div class="sidebar">
+        <a class="active" href="index.html">Home</a>
+        <div id="Links">
+          <a href="ff14.html">Character</a>
+          <a href="item.html">Free Company</a>
+          <a href="link.html">Link Shell</a>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="thisFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
 
-        <main class="container">
-            <div id="start-page">
-                <h1>Game information hub</h1>
-                <p><font size="5">All search information that gamers need
-                <br />All under one roof!
-                <br />To get started, please click on the game icon at the bottom
-                <br />Or the link at the side.
-                </font></p>
-                <a href="ff14.html"><img src="ffxiv.png" alt="ff14-logo" class="ff14img">
+    <main class="container">
+      <div id="start-page">
+        <header>
+          <h1>Final Fantasy XIV <br />Info On-The-Go</h1>
+        </header>
+        <h3>Quick, easy access page for all the</h3>
+        <h3>Final Fantasy 14 information that you need!</h3>
+
+        <br /><br />
+
+        <h3>Click on the link at the top or...</h3>
+        <h3>Click on the picture below to get started!</h3>
+
+        <section class="page-link">
+          <div class="row">
+            <div class="column">
+              <a href="char.html">
+                <img src="picture/scholar.png" alt="scholar2" />
+              </a>
+              <figcaption>Character</figcaption>
             </div>
-        </main>
-          
-                
-             
-    </body>
+            <div class="column">
+              <a href="fc.html">
+                <img src="picture/ninja.png" alt="ninja2" />
+              </a>
+              <figcaption>Free Company</figcaption>
+            </div>
+            <div class="row2">
+              <div class="column">
+                <a href="link.html">
+                <img src="picture/whm.png" alt="whm2" />
+              </a>
+              <figcaption>Link Shell</figcaption>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
+    <script src="js/hamburger.js"></script>
+  </body>
+</html>

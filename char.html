@@ -2,7 +2,7 @@
 <html lang="en" >
     <head>
         <meta charset="UTF-8">
-        <title>Game Information Hub</title>
+        <title>Final Fantasy XIV Quick Hub</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/bakamono.css" type="text/css">
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
@@ -10,20 +10,43 @@
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Slab'>
         <link rel="stylesheet" type="text/css" href="css/normalize.css/normalize.css" media="screen">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     </head>
 
     <body>
+
         <div class="sidebar">
-            <a class="active" href="index.html">Home</a>
-            <a href="ff14.html">Final Fantasy XIV</a>
+          <a class="active" href="index.html">Home</a>
+          <div id="Links">
+            <a href="ff14.html">Character</a>
+            <a href="item.html">Free Company</a>
+            <a href="link.html">Link Shell</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="thisFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
+      </div>
+
 
         <main class="container">
             <div id="start-page">
               <section class="app-container">
                 <form id="search-form">
                   <h1>Character Search</h1>
-            
+
+                  <br>
+
+                  <h3>If you wish to further get more information
+                    <br>on the searched character, simply search
+                    <br>for their names/server, and then place their
+                    <br>unique ID into the last search function.
+                  </h3>
+                  
+                  <br><br>
                   <p>Enter the name of the character</p><br>
                     <input
                           type="text"
@@ -33,7 +56,7 @@
                           size="40">
                     <br><br>
                   <p>Enter the server name</p>
-                  <a href="https://arrstatus.com/">List of Servers</a><br>
+                  <a href="https://arrstatus.com/" target="_blank">List of Servers</a><br>
                     <br><input
                     type="text"
                     id="server-input"
@@ -48,12 +71,30 @@
                                 value="Submit"
                               >
                             </form>
+                    <br><br>
+                    <p>Enter the Unique ID</p><br>
+                    <input
+                          type="text"
+                          id="id-input"
+                          class="form-control"
+                          placeholder="Unique ID"
+                          size="40">
+                    <br><br><br>
+                              <input
+                                id="submit-button"
+                                class="btn btn-primary"
+                                type="submit"
+                                value="Submit"
+                              >
+                            </form>
                           </section>
                           <section id="results-list" class="container hidden">
                           </section>
                         </main>
 
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                        <script src="script.js"></script>
+                        <script src="js/script.js"></script>
+                        <script src="js/hamburger.js"></script>
+                        
                     </body>
                     </html>
