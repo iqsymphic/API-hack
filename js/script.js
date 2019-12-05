@@ -66,29 +66,21 @@ function displayResults(responseJson) {
   $("#results-list").removeClass("hidden");
 }
 
+$(document).ready(function() {
+  watchForm2();
+});
+
 function watchForm2() {
-  $("#search-form").submit(e => {
+  $("#unique-form").submit(e => {
     event.preventDefault();
     let searchID = $("#id-input").val();
     getCharacterData(searchID);
   });
 }
 
-function formatQueryParam(param) {
-  const queryItems = Object.keys(param).map(
-    key => `${encodeURIComponent(key)}=${encodeURIComponent(param[key])}`
-  );
-  return queryItems.join("/");
-}
-
 function getCharacterData(unid) {
-  const param = {
-    id: unid,
-    privateKey: apiKey
-  };
-
-  const queryString = formatQueryParam(param);
-  const url = searchID + queryString;
+  const queueString = unid;
+  const url = searchID + "/" + queueString;
 
   fetch(url, { mode: "cors" })
     .then(response => {
@@ -106,17 +98,22 @@ function getCharacterData(unid) {
 
 function displayResult(jsonFile) {
   console.log(jsonFile);
-  /* $("#results-list").empty();
-  for (let i = 0; i < responseJson.Results.length; i++) {
-    $("#results-list").append(
-      `<ul style="list-style-type:none;"><li><br><br>
-                <img src=${responseJson.Results[i].Avatar}>
-                <h3>Name: ${responseJson.Results[i].Name}</h3>
-                <h4>Server: ${responseJson.Results[i].Server}</h4>
-                <h4>Unique ID: ${responseJson.Results[i].ID}</h4>
-            <br><br>
+  $("#unique-list").empty();
+
+  for (let key in jsonFile.Character.ActiveClassJob) {
+    console.log(`Key: ${key}`);
+    console.log(`Value: ${jsonFile.Character.ActiveClassJob[key]}`);
+
+    {
+      $("#unique-list").append(
+        `<ul style="list-style-type:none;"><li><br>
+                
+                <h3> ${key}: ${jsonFile.Character.ActiveClassJob[key]}</h3>
+                
+            <br>
             </li></ul>`
-    );
+      );
+    }
+    $("#unique-list").removeClass("hidden");
   }
-  $("#results-list").removeClass("hidden"); */
 }
