@@ -55,10 +55,12 @@ function displayResults(responseJson) {
   for (let i = 0; i < responseJson.Results.length; i++) {
     $("#results-list").append(
       `<ul style="list-style-type:none;"><li><br><br>
-                <img src=${responseJson.Results[i].Avatar}>
-                <h3>Name: ${responseJson.Results[i].Name}</h3>
-                <h4>Server: ${responseJson.Results[i].Server}</h4>
-                <h4>Unique ID: ${responseJson.Results[i].ID}</h4>
+
+                <img src= "${responseJson.Results[i].Avatar}" >
+                <h2>Name: ${responseJson.Results[i].Name}</h2>
+                <h3>Server: ${responseJson.Results[i].Server}</h3>
+                <h3>Unique ID: ${responseJson.Results[i].ID}</h3>
+                
             <br><br>
             </li></ul>`
     );
@@ -100,15 +102,26 @@ function displayResult(jsonFile) {
   console.log(jsonFile);
   $("#unique-list").empty();
 
-  for (let key in jsonFile.Character.ActiveClassJob) {
-    console.log(`Key: ${key}`);
-    console.log(`Value: ${jsonFile.Character.ActiveClassJob[key]}`);
+  for (let key1 in jsonFile.Character.ClassJobs) {
+    console.log(`Key: ${key1}`);
+
+    let jsonObj = jsonFile.Character.ClassJobs[key1];
+
+    console.log(`ClassJobs Value: ${JSON.stringify(jsonObj)}`);
 
     {
       $("#unique-list").append(
         `<ul style="list-style-type:none;"><li><br>
+
+               
                 
-                <h3> ${key}: ${jsonFile.Character.ActiveClassJob[key]}</h3>
+                <h3>Job: ${jsonObj.Name}</h3><br>
+                <p><b> Current Level:</b> ${jsonObj.Level}</p>
+                <p><b>Current Exp:</b> ${jsonObj.ExpLevel}</p>
+                <p><b>Remaining Exp:</b> ${jsonObj.ExpLevelTogo}</p>
+                <p><b>Class Performance:</b> ${jsonObj.ExpLevelMax}</p>
+                <p><b>Top Global Ranking:</b> ${jsonObj.IsSpecialised}</p>
+
                 
             <br>
             </li></ul>`
