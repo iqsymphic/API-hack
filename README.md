@@ -1,4 +1,4 @@
-# FFXIV-CharacterData
+# FFXIV-CharacterData #
 
 ## **Attention:** Final Fantasy XIV Players!
 
