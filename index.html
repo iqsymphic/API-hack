@@ -25,89 +25,82 @@
   </head>
 
   <body>
-      
-
     <main class="container">
       <div id="start-page">
         <header>
-          <h1>Final Fantasy XIV<br />Character Data</h1>
+          <h1>Final Fantasy XIV Character Data</h1>
         </header>
-        <h3>Giving the player all the</h3>
-        <h3>information about their character in</h3>
-        <h3>Final Fantasy XIV!</h3>
+        <h3>
+          Giving the player all the information about their character in Final
+          Fantasy XIV!<br /><br />
 
-        <br /><br />
+          Input your character's information below!<br />
+          Find your character then copy the Unique ID<br />
 
-        <h3>Input your character's information below!</h3><br>
-        <h3>Once you find your character </h3>
-        <h3>copy the Unique ID</h3><br>
-        <h3>And input into the second search bar!</h3>
+          And input into the second search bar!
+        </h3>
 
         <section class="app-container">
           <form id="search-form">
-            
-            <br><br>
-            <p>Enter the name of the character</p><br>
-              <input
-                    type="text"
-                    id="name-input"
-                    class="form-control"
-                    placeholder="Enter a name"
-                    size="40">
-              <br><br>
+            <br /><br />
+            <p>Enter the name of the character</p>
+            <br />
+            <input
+              type="text"
+              id="name-input"
+              class="form-control"
+              placeholder="Enter a name"
+              size="40"
+            />
+            <br /><br />
             <p>Enter the server name</p>
-            <a href="https://arrstatus.com/" target="_blank">List of Servers</a><br>
-              <br><input
+            <a href="https://arrstatus.com/" target="_blank">List of Servers</a
+            ><br />
+            <br /><input
               type="text"
               id="server-input"
               class="form-control"
               placeholder="Siren, Zalera, Shiva, etc."
-              size="40">
-              <br><br><br>
-                        <input
-                          id="submit-button"
-                          class="btn btn-primary"
-                          type="submit"
-                          value="Submit"
-                        >
-                      
-              <br><br>
-            </form>
-              <form id="unique-form">
-                    <p>Enter the Unique ID</p><br>
-                    <input
-                          type="text"
-                          id="id-input"
-                          class="form-control"
-                          placeholder="Unique ID"
-                          size="40">
-                    <br><br><br>
-                              <input
-                                id="submit-button"
-                                class="btn btn-primary"
-                                type="submit"
-                                value="Submit"
-                              >
-                            
-                            </form>
-                          </section>
-                          
-                          <section id="unique-list" class="container hidden">
-                          </section>
-                          
-                    </section>
-                    <section id="results-list" class="container hidden">
-                    </section>
-                    </div>
-                  </main>
+              size="40"
+            />
+            <br /><br /><br />
+            <input
+              id="submit-button"
+              class="btn btn-primary"
+              type="submit"
+              value="Search"
+            />
 
-                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                  <script src="js/script.js"></script>
+            <br /><br />
+          </form>
+          <form id="unique-form">
+            <p>Enter the Unique ID</p>
+            <br />
+            <input
+              type="text"
+              id="id-input"
+              class="form-control"
+              placeholder="Unique ID"
+              size="40"
+            />
+            <br /><br /><br />
+            <input
+              id="submit-button"
+              class="btn btn-primary"
+              type="submit"
+              value="Find"
+            />
+          </form>
+        </section>
 
+        <section id="unique-list" class="container hidden"></section>
 
-        
-        
-        
+        <section id="results-list" class="container hidden"></section>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script src="js/hamburger.js"></script>
   </body>
